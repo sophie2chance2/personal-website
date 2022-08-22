@@ -28,7 +28,7 @@
 					<nav id="nav">
 					  <ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="workExperience.html">Experience</a></li>
+						<li><a href="left-sidebar.html">Work Experience</a></li>
 						<li>
 						  <a href=#>Projects</a>
 						  <ul>
@@ -51,50 +51,13 @@
 					</nav>
 				  </header>
 
-						<!-- Form -->
-							<section>
-								<h3>Email Sophie</h3>
-								<form id="my-form" method="post" action="https://script.google.com/macros/s/AKfycbw8q5NCnMV0a_-kTSU6rwrND1sMDDH3qqW_dzqoIuK2ORpR6M-WRISiLQFVxHMuUPc/exec">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="name" id="name" value="" placeholder="Name"/>
-										</div>
-										<div class="col-6 col-12-xsmall">
-											<input type="email" name="email" id="email" value="" placeholder="Email" />
-										</div>
-										<div class="col-12">
-											<select name="category" id="category">
-												<option value="">- Category -</option>
-												<option value="1">Opportunity</option>
-												<option value="2">Personal Note</option>
-<!--												TODO: Figure out what these options should be -->
-												<option value="4">Other</option>
-											</select>
-										</div>
-<!--										<div class="col-6 col-12-medium">-->
-<!--											<input type="checkbox" id="copy" name="copy">-->
-<!--											<label for="copy">Email me a copy of this message</label>-->
-<!--&lt;!&ndash;											TODO: Figure out how to do this&ndash;&gt;-->
-<!--										</div>-->
-										<div class="col-12">
-											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-										</div>
-										<div class="col-12">
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="primary"></li>
-												<li><input type="reset" value="Reset" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section>
+<h1>Thank you! Sophie will get back to you soon.</h1>
 
 
               
 					</div>
 				</div>
       </div>
-    </div>
 
 			<!-- Footer -->
       <footer id="footer">
@@ -154,26 +117,6 @@
 		</div>
 
 		<!-- Scripts -->
-		<script>
-			window.addEventListener("load", function() {
-			  const form = document.getElementById('my-form');
-			  form.addEventListener("submit",
-					  function (e) {
-						  //  give submit message
-						  e.preventDefault();
-						  const data = new FormData(form);
-						  const action = e.target.action;
-						  fetch(action, {
-							  method: 'POST',
-							  body: data,
-						  })
-								  .then(() => {
-									  alert("Success!");
-								  })
-						  form.reset()
-					  });
-			});
-		</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
