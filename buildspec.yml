@@ -1,28 +1,41 @@
 version: 0.2
-env:
-    variables:
-        CACHE_CONTROL: "100"
-#         S3_BUCKET: animation-project
-        BUILD_ENV: dev
+
 phases:
-    install:
-        runtime-versions:
-            nodejs: 16
-        commands:
-            - echo Installing source NPM dependencies...
-            - npm install
-    build:
-        commands:
-            - echo Build started on `date`
-            - ng build --configuration=${BUILD_ENV}
-           # - ng test
-            - echo build completed
-    post_build:
-         commands:
-            - echo Post Build Started successfully on `date`
-            - echo Build completed on `date`
+  install:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm test
 artifacts:
-    files:
-        - '**/*'
-    base-directory: 'dist*'
-    discard-paths: yes
+  files:
+    - '**/*'
+
+# version: 0.2
+# env:
+#     variables:
+#         CACHE_CONTROL: "100"
+# #         S3_BUCKET: animation-project
+#         BUILD_ENV: dev
+# phases:
+#     install:
+#         runtime-versions:
+#             nodejs: 16
+#         commands:
+#             - echo Installing source NPM dependencies...
+#             - npm install
+#     build:
+#         commands:
+#             - echo Build started on `date`
+#             - ng build --configuration=${BUILD_ENV}
+#            # - ng test
+#             - echo build completed
+#     post_build:
+#          commands:
+#             - echo Post Build Started successfully on `date`
+#             - echo Build completed on `date`
+# artifacts:
+#     files:
+#         - '**/*'
+#     base-directory: 'dist*'
+#     discard-paths: yes
