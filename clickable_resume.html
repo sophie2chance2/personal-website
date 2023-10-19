@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Home page
+	Resume (work experience)
+	Outside Projects
+	  Success in Spreadsheets
+	  Somnia Sleep Technology
+	  Personal Dashboard (future)
+	Medium
+	Contact Me
+
+
+-->
+<html>
+  <head>
+    <link rel="icon" href="images/GradPhotoCircle.png" />
+    <!--    TODO: Make this image into a logo and add to all other pages-->
+    <title>Sophie Chance</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload landing">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">Sophie Chance</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workExperience.html">Experience</a></li>
+            <li>
+              <a href="timeline.html">My Story</a>
+            </li>
+            <li>
+              <a href="https://medium.com/@sophie2chance" target="_blank"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a href="contactMe.html" class="button primary">Contact Me</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- CONTENT -->
+      <style>
+        #pdfContainer {
+          width: 100%;
+          height: 100vh; /* 100vh ensures it takes up the full viewport height */
+          position: relative;
+        }
+
+        .overlay-link {
+          position: absolute;
+          display: block;
+          background-color: rgba(255, 255, 255, 0); /* Transparent background */
+          z-index: 2; /* To position it above the iframe */
+        }
+
+        /* Example link positions - adjust these based on where you want the links on your PDF */
+        .link-project1 {
+          top: 300px;
+          left: 100px;
+          width: 200px;
+          height: 20px;
+        }
+
+        /* ... other link styles ... */
+      </style>
+
+      <div id="pdfContainer">
+        <iframe src="chance_resume.pdf" width="100%" height="100%"></iframe>
+        <a
+          href="https://github.com/your/project1"
+          target="_blank"
+          class="overlay-link link-project1"
+        ></a>
+        <!-- ... other overlay links ... -->
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://twitter.com/sophie2chance"
+              class="icon brands alt fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/sophie.chance.39/"
+              class="icon brands alt fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/sophiechance/"
+              class="icon brands alt fa-linkedin-in"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/sophie2chance/"
+              class="icon brands alt fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/sophie2chance2"
+              class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:sophie2chance@gmail.com?subject=Connection%20from%20your%20Website!"
+              class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Untitled. All rights reserved.</li>
+          <li>
+            Design: <a href="http://html5up.net">HTML5 UP</a>
+            & Sophie Chance
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
