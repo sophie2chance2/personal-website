@@ -9,6 +9,54 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .row {
+    display: flex;
+    justify-content: center; /* This will center the .col-6 divs inside the .row */
+    align-items: start; /* This will align the .col-6 divs to the top */
+    }
+
+    .col-6 {
+        flex: 0 0 50%; /* This will make sure each .col-6 div takes up half of the .row width */
+        max-width: 50%; /* This will also ensure the div doesn't become larger than 50% */
+        padding: 0 10%; /* You can adjust the padding to ensure the content has some space around */
+        align-items: center;
+
+    }
+
+    .university-logo {
+    display: block; /* Changes the display from inline (default for images) to block to allow margin auto to work */
+    margin-left: auto; /* Auto margin on the left */
+    margin-right: auto; /* Auto margin on the right */
+    width: 40%; /* Or whatever width you desire */
+    height: auto; /* Keeps the aspect ratio of the image */
+    margin-bottom: 10%; /* Adds some space between the image and the text */
+    }
+    .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* This adds space between the book items */
+    justify-content: center; /* This centers the books in the container */
+}
+
+.book {
+    width: 150px; /* Set the width of the book div */
+    text-align: center; /* Center the text under the image */
+}
+
+.book-cover {
+    width: 100%; /* Make the cover fill the div */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Change display to block to enable margins to work properly */
+    margin-bottom: 10px; /* Add some space between the image and the title */
+}
+
+.book-title {
+    font-size: 1rem; /* Adjust the size as needed */
+    color: #ffffff; /* Change the color as needed */
+}
+
+  </style>
   </head>
 
   <body class="is-preload">
@@ -34,6 +82,7 @@
       </header>
 
       <!-- Main -->
+      <div id="main" class="wrapper style1">
       <section id="main" class="container">
         <header class="major">
           <h2>Learning & Certifications</h2>
@@ -49,7 +98,7 @@
                 <h2>Education</h2>
             </header>
             <div class="row">
-                <div class="col-6"><img src="images/Cal_logo.png" alt="" width="40%">
+                <div class="col-6"><img src="images/Cal_logo.png" alt=""  class="university-logo">
                 
                     <h3>University of California, Berkeley</h3>
                     <p>Major: Masters of Information and Data Science
@@ -63,7 +112,7 @@
                             <li>Research Design</li></ul>
                         </p><br>
                 </div>
-                <div class="col-6"><img src="images/sdsu_logo.png" alt="" width="45%">
+                <div class="col-6"><img src="images/sdsu_logo.png" alt=""  class="university-logo">
                     <h3>San Diego State University</h3>
                     <p>Major: Management Information Systems 
                         <br>Minor: Electrical Engineering
@@ -93,66 +142,78 @@
                   <p>Course: <a href="https://www.udemy.com/share/101W943@0rfXAYOJt5Q3HxhTsFewIRjaPxb_RanrKt2v1EexHGldl4VvlM3flR3R0WvKaKJX/">Zero to Hero: Python Bootcamp</a>
                         <br>Started Learning: <strong>2020</strong>
                             <br>Hours of Experience: <strong>1000+ hours</strong></p>
-                            <!--												TODO: Add most common packages and add projects done-->
-                              Projects:
-                          <ul class="">
-                              <li>Custom API integrations</li>
-                              <li>Data processing</li>
-                              <li>...</li>
-                          </ul>
             </div>
             <div class="col-4 col-6-xsmall">
                 <h3>SQL</h3>
                         <p>Course: <a href="https://www.udemy.com/share/101WsU3@M1dyU1FY6o7FtYbkV2dd1z_olGD0Ko3wn0-ygYRQ8w4xihsJMbnd_IwEugpaeqa9/">The Complete SQL Bootcamp</a>
                         <br>Started Learning: <strong>2020</strong>
                             <br>Hours of Experience: <strong>500+ hours</strong></p>
-                            <!--												TODO: Add most common packages and add projects done-->
-                            Projects:
-                          <ul class="">
-                              <li>Daily/Monthly Active Users</li>
-                              <li>...</li>
-                          </ul>
             </div>
             <div class="col-4 col-6-xsmall">
-                <h3>Analytics</h3>
-                <p>Learned on the job
-                    <br>Started Learning: <strong>2020</strong>
-                    <br>Hours of Experience: <strong>1000+ hours</strong></p>
-                            <!--												TODO: Add most common packages and add projects done-->
-                      Projects:
-                          <ul>
-                              <li>Annual/ Monthly Recurring Revenue</li>
-                              <li>Net Dollar Retention</li>
-                              <li>Gross Logo Retention</li>
-                              <li>Account Executive/SDR Activity Tracking</li>
-                              <li>Sales Health Metrics</li>
-                              <li>Active Client Health Metrics</li>
-                              <li>High Risk Clients</li>
-                          </ul>
-                </ul>
+                <h3>R</h3>
+                <p>Course: <a
+                    href="https://courses.edx.org/certificates/c1351fdc930647258bcaab6c85aa3dc2"
+                    >Data Science: R Basics</a
+                  ><br>Started Learning: <strong>2021</strong>
+                    <br>Hours of Experience: <strong>100+ hours</strong></p>
             </div>
           </div>
           <hr>
         </section>
 
-        <!-- Certifications Section -->
-        <section class="box">
-          <h3>Certifications</h3>
-          <p>Highlight the certifications you have achieved.</p>
-          <!-- Certifications list or images -->
-        </section>
-
         <!-- Books Section -->
         <section class="box">
-          <h3>Books</h3>
-          <p>
-            Discuss the books that have contributed to your knowledge and
-            expertise.
-          </p>
-          <!-- List of books or cover images -->
+          <h3>Some of My Favorite Books...</h3>
+          <section class="book-list">
+            <div class="book">
+                <img src="images/sapiens.jpeg" alt="Sapiens" class="book-cover">
+                <p class="book-title">Sapiens</p>
+            </div>
+            <div class="book">
+              <img src="images/abundance.jpeg" alt="Abundance" class="book-cover">
+              <p class="book-title">Abundance</p>
+            </div>
+            <div class="book">
+              <img src="images/defining_decade.jpeg" alt="The Defining Decade" class="book-cover">
+              <p class="book-title">The Defining Decade</p>
+            </div>
+            <div class="book">
+              <img src="images/atlas_of_the_heart.jpeg" alt="Book Title" class="book-cover">
+              <p class="book-title">Atlas of the Heart</p>
+            </div>
+            <div class="book">
+              <img src="images/atomic_habits.jpeg" alt="Book Title" class="book-cover">
+              <p class="book-title">Atomic Habits</p>
+            </div>
+            <div class="book">
+              <img src="images/Weapons_of_math_destruction.jpeg" alt="Book Title" class="book-cover">
+              <p class="book-title">Weapons of Math Destruction</p>
+            </div>
+            <div class="book">
+              <img src="images/I_never_thought_of_it.jpeg" alt="Book Title" class="book-cover">
+              <p class="book-title">I Never Thought of it That Way</p>
+            </div>
+            <div class="book">
+              <img src="images/naked_stats.jpeg" alt="Book Title" class="book-cover">
+              <p class="book-title">Naked Statistics</p>
+            </div>
+            <div class="book">
+              <img src="images/rich_dad.jpeg" alt="Book Title" class="book-cover">
+              <p class="book-title">Rich Dad, Poor Dad</p>
+            </div>
+            <div class="book">
+              <img src="images/thinking_fast.jpeg" alt="Book Title" class="book-cover">
+              <p class="book-title">Thinking Fast and Slow</p>
+            </div>
+            <div class="book">
+              <img src="images/algo_to_live_by.jpeg" alt="Book Title" class="book-cover">
+              <p class="book-title">Algorithms to Live By</p>
+            </div>
+            <!-- Repeat the div above for each book -->
+        </section>
         </section>
       </section>
-
+    </div>
       <!-- Footer -->
       <footer id="footer">
         <ul class="icons">
