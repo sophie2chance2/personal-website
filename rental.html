@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Rental Property</title>
+    <link rel="icon" href="images/rental_images/house_icon.png" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .property-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+
+      .property-header .location {
+        font-size: 14px;
+        color: #888;
+      }
+
+      .property-header h1 {
+        font-size: 28px;
+        margin: 5px 0;
+      }
+
+      .property-header .details {
+        font-size: 16px;
+        color: #666;
+        display: flex;
+        align-items: center;
+      }
+
+      .property-header .details img {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+
+      .property-header .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-align: right;
+      }
+
+      .property-header .special-offer {
+        font-size: 14px;
+        color: #4caf50;
+        text-align: right;
+        margin-top: 5px;
+      }
+
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .property-description {
+        margin-bottom: 40px;
+      }
+
+      .amenities {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 40px;
+      }
+
+      .amenities li {
+        background: url("checkmark.png") no-repeat left center;
+        padding-left: 30px;
+        margin-bottom: 10px;
+      }
+
+      /* Carousel Styles */
+      .carousel {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        margin: 20px auto;
+        position: relative;
+      }
+
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: 60vh; /* Set height as a percentage of the viewport height */
+        /* max-height: 50%; Ensure images don't get too tall on very large screens */
+        margin-right: 10px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+
+      .carousel-nav button {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .carousel-nav button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .contact-me {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+
+      .contact-me input,
+      .contact-me textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+      }
+
+      .contact-me button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .map iframe {
+        width: 100%;
+        height: 400px;
+        border: 0;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .apply-button {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .apply-button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Rental Property</h1>
+    </header>
+
+    <div class="container">
+      <!-- Top Section -->
+      <div class="property-header">
+        <div>
+          <div class="location">
+            San Diego // Mission Valley // 6049 Rancho Mission Rd
+          </div>
+          <h1>6049 Rancho Mission Rd</h1>
+          <div class="details">
+            <img src="images/rental_images/bed_icon.png" alt="Bedroom Icon" />
+            2 Bedroom &nbsp;
+            <img
+              src="images/rental_images/bathroom_icon.png"
+              alt="Bathroom Icon"
+            />
+            2 Bath &nbsp;
+            <img
+              src="images/rental_images/house_size_icon.svg"
+              alt="Sqft Icon"
+            />
+            951 sqft
+          </div>
+        </div>
+        <div>
+          <div class="price">$3,700 /month</div>
+        </div>
+      </div>
+
+      <section class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="carousel">
+          <div class="carousel-inner">
+            <img src="images/rental_images/IMG_1736.JPG" />
+            <img src="images/rental_images/IMG_1740.JPG" />
+            <img src="images/rental_images/IMG_1746.JPG" />
+            <img src="images/rental_images/IMG_1756.JPG" />
+            <img src="images/rental_images/IMG_1763.JPG" />
+            <img src="images/rental_images/IMG_1770.JPG" />
+            <img src="images/rental_images/IMG_1780.JPG" />
+            <img src="images/rental_images/IMG_1783.JPG" />
+            <img src="images/rental_images/IMG_1787.JPG" />
+            <img src="images/rental_images/IMG_1815.JPG" />
+            <img src="images/rental_images/IMG_1830.JPG" />
+            <img src="images/rental_images/IMG_1832.JPG" />
+            <img src="images/rental_images/IMG_1862.JPG" />
+            <img src="images/rental_images/IMG_1873.JPG" />
+            <img src="images/rental_images/IMG_1878.JPG" />
+            <img src="images/rental_images/IMG_1897.JPG" />
+            <img src="images/rental_images/IMG_1899.JPG" />
+            <img src="images/rental_images/IMG_1914.JPG" />
+            <!-- <img src="images/image3.jpg" alt="Pool Area">
+                <img src="images/image4.jpg" alt="Kitchen">
+                <img src="images/image5.jpg" alt="Dining Area"> -->
+          </div>
+          <div class="carousel-nav">
+            <button id="prevBtn">&lt;</button>
+            <button id="nextBtn">&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="gallery">
+        <h2>Photo Gallery</h2>
+        <img src="images/test_photo.jpg" alt="Living Room" />
+        <img src="images/test_photo.jpg" alt="Bedroom" />
+        <img src="image3.jpg" alt="Pool Area" />
+      </section> -->
+
+      <section class="property-description">
+        <h2>Property Description</h2>
+        <p>
+          Welcome to your new home in the heart of Mission Valley! This recently
+          renovated 2-bedroom, 2-bathroom condo offers modern comfort and
+          convenience, making it the perfect retreat for anyone looking to enjoy
+          the vibrant lifestyle of San Diego.
+        </p>
+        <p>
+          Step inside and be greeted by a spacious, fully furnished living space
+          that features new luxury vinyl plank flooring throughout. The large
+          living room opens up to a cozy patio, just 15 steps away from one of
+          the complex's sparkling pools - perfect for enjoying the California
+          sunshine. The condo is equipped with central A/C and heating, ensuring
+          you stay comfortable year-round.
+        </p>
+        <p>
+          This property includes one covered reserved parking spot, along with
+          two additional parking passes, making it easy for you and your guests.
+          The complex itself boasts an array of amenities, including three
+          pools, two hot tubs, a gym, a sauna, and courts for pickleball,
+          tennis, and basketball. Outdoor BBQs, a dog run, and onsite laundry
+          facilities add to the convenience and appeal of this community.
+        </p>
+        <p>
+          Location is everything, and this condo delivers. You'll be less than a
+          mile from Snapdragon Stadium, and just minutes from some of San
+          Diego's most popular neighborhoods, including North Park, Hillcrest,
+          and Downtown. For beach lovers, Pacific Beach and Ocean Beach are just
+          a 15-minute drive away.
+        </p>
+        <p>
+          Whether you're looking to relax by the pool, stay active with the
+          complex's many amenities, or explore the surrounding areas, this
+          Mission Valley condo offers it all. Don't miss your chance to make
+          this your new home!
+        </p>
+      </section>
+
+      <section class="amenities">
+        <h2>Amenities</h2>
+
+        <h3>Condo Features:</h3>
+        <ul>
+          <li>1 Covered Parking Spot & 2 Parking Passes</li>
+          <li>Central A/C & Heating</li>
+          <li>New Luxury Vinyl Plank Flooring</li>
+          <li>Spacious Living Room</li>
+          <li>Patio 15 Steps from Pool</li>
+          <li>Pet Friendly (case by case)</li>
+          <li>(Optional) Fully Furnished</li>
+        </ul>
+
+        <h3>Complex Amenities:</h3>
+        <ul>
+          <li>3 Pools & 2 Hot Tubs</li>
+          <li>Gym & Sauna</li>
+          <li>Pickleball, Tennis & Basketball Courts</li>
+          <li>BBQs</li>
+          <li>Dog Run</li>
+          <li>Onsite Laundry</li>
+        </ul>
+
+        <h3>Prime Location:</h3>
+        <ul>
+          <li>Less than 1 Mile to Snapdragon Stadium</li>
+          <li>5 Minutes to North Park & Hillcrest</li>
+          <li>15 Minutes to Pacific & Ocean Beach</li>
+          <li>10 Minutes to Downtown</li>
+        </ul>
+      </section>
+
+      <section class="contact-me">
+        <h2>Apply</h2>
+        <p>
+          If you're interested in applying for this property, please review the
+          application requirements below and send your application to
+          <a href="mailto:sophie2chance@gmail.com">sophie2chance@gmail.com</a>.
+        </p>
+
+        <h3>Application Requirements:</h3>
+        <ul>
+          <li>Completed rental application form</li>
+          <li>Proof of income (e.g., recent pay stubs or bank statements)</li>
+          <li>Credit report with a minimum score of 650</li>
+          <li>Copy of a valid photo ID</li>
+          <li>Pet information (if applicable)</li>
+          <li>References from previous landlords</li>
+        </ul>
+
+        <p>
+          If you meet the requirements, please email your application and any
+          questions to
+          <a href="mailto:sophie2chance@gmail.com">sophie2chance@gmail.com</a>.
+          We look forward to hearing from you!
+        </p>
+
+        <p>
+          <a
+            href="images/rental_images/california-rental-application.pdf"
+            class="apply-button"
+            download
+          >
+            Download Application Form
+          </a>
+        </p>
+      </section>
+
+      <section class="map">
+        <h2>Location</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6708.6471832735!2d-117.11211322357477!3d32.78367817366089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d955bbfa98d57d%3A0xa23cd8fa058e1b63!2s6049%20Rancho%20Mission%20Rd%2C%20San%20Diego%2C%20CA%2092108!5e0!3m2!1sen!2sus!4v1724020710977!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </div>
+
+    <footer>
+      <!-- <p>&copy; Sophie Chance.</p> -->
+      <p>
+        For inquiries, email
+        <a href="mailto:sophie2chance@gmail.com">sophie2chance@gmail.com</a>
+      </p>
+    </footer>
+    <!-- JavaScript for Carousel -->
+    <script>
+      const carousel = document.querySelector(".carousel-inner");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const totalSlides = carousel.children.length;
+        const visibleSlides = Math.floor(
+          carousel.parentElement.offsetWidth / carousel.children[0].offsetWidth
+        );
+
+        if (index >= totalSlides - visibleSlides + 1) {
+          currentIndex = 0;
+        } else if (index < 0) {
+          currentIndex = totalSlides - visibleSlides;
+        } else {
+          currentIndex = index;
+        }
+
+        const offset = currentIndex * (carousel.children[0].offsetWidth + 10); // 10px is the margin-right
+        carousel.style.transform = `translateX(-${offset}px)`;
+      }
+
+      prevBtn.addEventListener("click", () => showSlide(currentIndex - 1));
+      nextBtn.addEventListener("click", () => showSlide(currentIndex + 1));
+    </script>
+  </body>
+</html>
