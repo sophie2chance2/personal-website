@@ -155,6 +155,14 @@
         object-fit: contain; /* Ensure the full image is visible without cropping */
         border-radius: 5px;
       }
+      .carousel-inner video {
+        width: 100%;
+        height: auto;
+        max-height: 40vh; /* Ensure the video has a similar height to the images */
+        margin-right: 10px;
+        object-fit: cover; /* This keeps the video content centered and covered */
+        border-radius: 5px;
+      }
 
       .carousel-nav {
         position: absolute;
@@ -290,9 +298,13 @@
             <img src="images/rental_images/IMG_1897.JPG" />
             <img src="images/rental_images/IMG_1899.JPG" />
             <img src="images/rental_images/IMG_1914.JPG" />
-            <!-- <img src="images/image3.jpg" alt="Pool Area">
-                <img src="images/image4.jpg" alt="Kitchen">
-                <img src="images/image5.jpg" alt="Dining Area"> -->
+            <video controls>
+              <source
+                src="images/rental_images/full_house_tour.mov"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="carousel-nav">
             <button id="prevBtn">&lt;</button>
