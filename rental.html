@@ -155,13 +155,13 @@
         object-fit: contain; /* Ensure the full image is visible without cropping */
         border-radius: 5px;
       }
-      .carousel-inner video {
+      .carousel-inner iframe {
         width: 100%;
         height: auto;
         max-height: 40vh; /* Ensure the video has a similar height to the images */
         margin-right: 10px;
-        object-fit: cover; /* This keeps the video content centered and covered */
         border-radius: 5px;
+        border: none; /* Removes the iframe border */
       }
 
       .carousel-nav {
@@ -297,13 +297,16 @@
             <img src="images/rental_images/bathroom_bedroom.JPG" />
             <img src="images/rental_images/green_bathroom.JPG" />
             <img src="images/rental_images/patio.JPG" />
-            <!-- <video controls>
-              <source
-                src="images/rental_images/full_house_tour.mov"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> -->
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/pSUb1Q-K4Hw?si=4lOykJx7c3wRFwGR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="carousel-nav">
             <button id="prevBtn">&lt;</button>
