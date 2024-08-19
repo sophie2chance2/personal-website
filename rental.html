@@ -71,7 +71,7 @@
 
       .property-header .special-offer {
         font-size: 14px;
-        color: #4caf50;
+        color: #333;
         text-align: right;
         margin-top: 5px;
       }
@@ -79,29 +79,38 @@
       /* Media query for small screens */
       @media (max-width: 600px) {
         .property-header {
+          flex-direction: column; /* Stack elements vertically on mobile */
           align-items: flex-start; /* Align content to the left */
+          padding: 10px; /* Add padding around the section */
         }
 
         .property-header .location,
         .property-header .details,
         .property-header .price {
           text-align: left; /* Ensure all text is aligned left */
+          width: 100%; /* Ensure elements take up full width */
+          margin-bottom: 10px; /* Add margin below each section */
         }
 
         .property-header h1 {
-          font-size: 22px; /* Slightly reduce the font size for the heading */
-          line-height: 1.3;
+          font-size: 24px; /* Adjust font size for better readability */
+          line-height: 1.4;
+          margin-bottom: 10px; /* Add margin below heading */
         }
 
         .property-header .price {
-          font-size: 22px; /* Adjust font size of the price for better fit */
+          font-size: 22px; /* Slightly smaller font size for the price */
+          margin-top: 10px; /* Add margin above the price */
         }
 
         .property-header .price span {
-          font-size: 14px; /* Make the '/month' text smaller on mobile */
+          font-size: 14px; /* Make the '/month' text smaller */
+        }
+
+        .property-header .details {
+          margin-bottom: 15px; /* Add more space below details */
         }
       }
-
       h2 {
         color: #333;
         margin-bottom: 20px;
@@ -255,6 +264,7 @@
         </div>
         <div>
           <div class="price">$3,700 /month</div>
+          <div class="special-offer">One year lease</div>
         </div>
       </div>
 
@@ -345,6 +355,7 @@
           <li>1 Covered Parking Spot & 2 Parking Passes</li>
           <li>Central A/C & Heating</li>
           <li>New Luxury Vinyl Plank Flooring</li>
+          <li>Brand New Stainless Steel Appliances</li>
           <li>Spacious Living Room</li>
           <li>Patio 15 Steps from Pool</li>
           <li>Pet Friendly (case by case)</li>
@@ -363,15 +374,37 @@
 
         <h3>Prime Location:</h3>
         <ul>
-          <li>Less than 1 Mile to Snapdragon Stadium</li>
-          <li>5 Minutes to North Park & Hillcrest</li>
-          <li>15 Minutes to Pacific & Ocean Beach</li>
-          <li>10 Minutes to Downtown</li>
+          <li>Within 2 miles:</li>
+          <ul>
+            <li>Right between the 15 and 8 freeways</li>
+            <li>Snapdragon Stadium</li>
+            <li>Kaiser Permanente</li>
+            <li>Costco</li>
+            <li>Target</li>
+            <li>Vons</li>
+            <li>Mission Valley Mall</li>
+          </ul>
+
+          <li>10 min drive:</li>
+          <ul>
+            <li>North Park</li>
+            <li>Hillcrest</li>
+            <li>Fashion Valley Mall</li>
+          </ul>
+
+          <li>15 min drive:</li>
+          <ul>
+            <li>Pacific Beach</li>
+            <li>Ocean Beach</li>
+            <li>Downtown</li>
+            <li>San Diego Airport</li>
+          </ul>
         </ul>
       </section>
 
       <section class="contact-me">
         <h2>Apply</h2>
+        <h4><i>Available: October 1, 2024</i></h4>
         <p>
           If you're interested in applying for this property, please review the
           application requirements below and send your application to
